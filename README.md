@@ -1,2 +1,3 @@
 # NavDurga
-Shoping Website
+
+Shoping Website for Indian Clothing Store.
