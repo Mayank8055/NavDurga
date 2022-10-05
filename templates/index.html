@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>NDCH</title>
+{% endblock title %}
+
+{% block nav_left %}
+    <form class="d-flex">
+        <button formaction="/login" class="btn btn-primary mx-2" type="submit">Login</button>
+        <button formaction="/signup" class="btn btn-danger mx-2" type="submit">Sign Up</button>
+    </form>
+{% endblock nav_left %}
+
+{% block body %}
+<div class="bg_land">
+    <div class="pt-3">
+        <img src="/static/logo.png" alt="Logo" style="width:25vh;" class="rounded-pill"> 
+    </div>
+    <div class="content pt-4 pb-3 mt-5">
+        <p style="padding-left: 100%; width: 200vw;">NavDurga</p>
+        <p style="padding-left: 100%; width: 200vw;">NavDurga</p>
+    </div>
+    <div class="content pt-5 pb-3 mt-5">
+        <p style="padding-left: 100%; width: 200vw;">Cloth</p>
+        <p style="padding-left: 100%; width: 200vw;">Cloth</p>
+    </div>
+    <div class="content pt-5 pb-3 mt-5">
+        <p style="padding-left: 100%; width: 200vw;">House</p>
+        <p style="padding-left: 100%; width: 200vw;">House</p>
+    </div>
+    
+</div>
+{% endblock body %}
