@@ -5,7 +5,7 @@ from models import *
 from passlib.hash import pbkdf2_sha256
 
 # Explicit Custom validator
-def invalid_cred(form,field): # Here form is LogInForm and field is password as invalid_cred is called in password field of LogInForm
+def invalid_cred(form,field): # This form is LogInForm and field is password as invalid_cred is called in password field of LogInForm
     '''Username and Password Checker'''
     username_entered = form.username.data # access username field through form as field is password
     password_entered = field.data # data in password field
@@ -14,7 +14,7 @@ def invalid_cred(form,field): # Here form is LogInForm and field is password as 
     if not user_instance: # if user not found in datatbase
         raise ValidationError(message=message)
     else:
-        if not pbkdf2_sha256.verify(password_entered, user_instance.password): # if entered password is not same as stored password
+        if not pbkdf2_sha256.verify(password_entered, user_instance.password): # if entered password is not same as stored password, it will raise a validation error
             raise ValidationError(message=message)
 
 class SignUpForm(FlaskForm):
