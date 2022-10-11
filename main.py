@@ -95,8 +95,8 @@ def unauthenticated():
 def login():
 
     login_f = LogInForm() # instance of my flask-form class 'wtforms_filed'
-    if login_f.validate_on_submit(): #this method will return true if form submitted using POST and all validators passes
-        # Take data from form
+    if login_f.validate_on_submit(): #this method will return true if form submitted using POST and all validators passes succesfully
+        # Take data from the form
         username = login_f.username.data
         user_object= User.query.filter_by(username = login_f.username.data).first()
         login_user(user_object)
